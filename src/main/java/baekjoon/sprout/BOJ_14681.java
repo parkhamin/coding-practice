@@ -6,7 +6,7 @@ public class BOJ_14681 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
-        sc.nextLine(); // 엔터 후에 새로운 정수를 받기 위함.
+        //sc.nextLine(); // 엔터 후에 새로운 정수를 받기 위함.
         int y = sc.nextInt();
 
         if (x >= -1000 && x <= 1000 && y >= -1000 && y <= 1000){
