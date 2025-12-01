@@ -9,3 +9,12 @@
 ***
 ***251130***
 - (정정) sc.nextLine() : nextInt()에서 nextLine 순서로 갈 때 중요
+***
+**251201**
+1. 10951
+   - String[] arr = br.readLine().split(" ") 을 받아서 null 조건을 확인하면 split 메소드에서 NullPointerException이 발생
+   - 먼저 String으로 br.readLine() 한 줄을 받고
+   - 이 str이 null인지 아닌지 조건으로 반복문을 돌기
+2. 10951_version2
+   - BufferedReader 말고 Scanner를 사용할 시
+   - sc.hasNext() 로 조건 확인
