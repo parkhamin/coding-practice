@@ -18,3 +18,17 @@
 2. 10951_version2
    - BufferedReader 말고 Scanner를 사용할 시
    - sc.hasNext() 로 조건 확인
+***
+**251215**
+1. 15552
+   - BufferedReader, BufferedWriter 사용
+2. 10807
+   - split 메서드 지양
+   - StringTokenizer 사용 지향할 것
+3. 5597
+   - 중첩 반복문에서의 break과 continue
+      - break : 안쪽 반복문만 종료
+      - continue : 안쪽 반복문만 건너뜀
+   - 조건식 초기화 위치 염두하기
+4. 11654
+   - 아스키코드 : char -> int 형변환
