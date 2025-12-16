@@ -32,3 +32,14 @@
    - 조건식 초기화 위치 염두하기
 4. 11654
    - 아스키코드 : char -> int 형변환
+***
+**251216**
+1. 2744
+   - Character.toUpperCase(char), Character.toLowerCase(char) 사용가능
+2. 9086
+   - char + char = int
+   - char + char + "" 하면 문자열 덧셈 가능
+3. 15964
+   - 연산값이 int 범위를 넘을 것도 고려해서 자료값 타입 정하기
+   - A, B는 100,000이라고 했지만 A와 B 가지고 연산한 값이 오버플로우 발생 가능
+   - 따라서 long으로 강제캐스팅하거나 A와 B의 타입을 long으로 두어야 100점이 나온다.
