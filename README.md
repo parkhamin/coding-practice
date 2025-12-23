@@ -84,3 +84,29 @@
 3. 3052
    - boolean 값 초기화 위치는 비교하려는 반복문 위여야 함!
    - 하나하나 비교하지 않아도 boolean 배열 선언하면 간단히 구현 가능
+***
+**251223**
+1. 1978
+```
+   int decimalCount = 0;
+   int count = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 1; j <= array[i]; j++) {
+                if (array[i] % j == 0) count++;
+            }
+            if (count == 2) decimalCount++;
+        }
+```
+   - 이중 반복문에서 안쪽 반복문 끝내고 다음 j로 검사할 때 count는 0으로 초기화 되지 않았기 때문에 count가 2가 될 수가 없는 구조였다.
+   - 내가 조건을 확인할 때 필요한 변수가 초기화가 필요한 경우는 반복문 바로 위에 선언한다는 것을 염두하자.
+```
+   int decimalCount = 0;
+        for (int i = 0; i < N; i++) {
+            int count = 0;
+            for (int j = 1; j <= array[i]; j++) {
+                if (array[i] % j == 0) count++;
+            }
+            if (count == 2) decimalCount++;
+        }
+```
+   - 이 경우 정상 동작하는 것을 볼 수 있다.
