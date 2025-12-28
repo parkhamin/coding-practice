@@ -12,45 +12,45 @@
 ***
 **251201**
 1. 10951
-   - String[] arr = br.readLine().split(" ") 을 받아서 null 조건을 확인하면 split 메소드에서 NullPointerException이 발생
-   - 먼저 String으로 br.readLine() 한 줄을 받고
-   - 이 str이 null인지 아닌지 조건으로 반복문을 돌기
+- String[] arr = br.readLine().split(" ") 을 받아서 null 조건을 확인하면 split 메소드에서 NullPointerException이 발생
+- 먼저 String으로 br.readLine() 한 줄을 받고
+- 이 str이 null인지 아닌지 조건으로 반복문을 돌기
 2. 10951_version2
-   - BufferedReader 말고 Scanner를 사용할 시
-   - sc.hasNext() 로 조건 확인
+- BufferedReader 말고 Scanner를 사용할 시
+- sc.hasNext() 로 조건 확인
 ***
 **251215**
 1. 15552
-   - BufferedReader, BufferedWriter 사용
+- BufferedReader, BufferedWriter 사용
 2. 10807
-   - split 메서드 지양
-   - StringTokenizer 사용 지향할 것
+- split 메서드 지양
+- StringTokenizer 사용 지향할 것
 3. 5597
-   - 중첩 반복문에서의 break과 continue
-      - break : 안쪽 반복문만 종료
-      - continue : 안쪽 반복문만 건너뜀
-   - 조건식 초기화 위치 염두하기
+- 중첩 반복문에서의 break과 continue
+   - break : 안쪽 반복문만 종료
+   - continue : 안쪽 반복문만 건너뜀
+- 조건식 초기화 위치 염두하기
 4. 11654
-   - 아스키코드 : char -> int 형변환
+- 아스키코드 : char -> int 형변환
 ***
 **251216**
 1. 2744
-   - Character.toUpperCase(char), Character.toLowerCase(char) 사용가능
+- Character.toUpperCase(char), Character.toLowerCase(char) 사용가능
 2. 9086
-   - char + char = int
-   - char + char + "" 하면 문자열 덧셈 가능
+- char + char = int
+- char + char + "" 하면 문자열 덧셈 가능
 3. 15964
-   - 연산값이 int 범위를 넘을 것도 고려해서 자료값 타입 정하기
-   - A, B는 100,000이라고 했지만 A와 B 가지고 연산한 값이 오버플로우 발생 가능
-   - 따라서 long으로 강제캐스팅하거나 A와 B의 타입을 long으로 두어야 100점이 나온다.
+- 연산값이 int 범위를 넘을 것도 고려해서 자료값 타입 정하기
+- A, B는 100,000이라고 했지만 A와 B 가지고 연산한 값이 오버플로우 발생 가능
+- 따라서 long으로 강제캐스팅하거나 A와 B의 타입을 long으로 두어야 100점이 나온다.
 ***
 **251217**
 ***
 **251218**
 1. 10818
-   - 반복문 범위 끝까지 확인하기
+- 반복문 범위 끝까지 확인하기
 2. 2562
-   - 초깃값 설정 시 주의하기
+- 초깃값 설정 시 주의하기
 3. 2525
 ```
    minute = (minute + need) % 60;
@@ -71,19 +71,19 @@
 ```
    - newW는 항상 2자리일 것이고, newW가 0부터 9의 수라면 앞자리를 0으로 채우겠다!
 2. 2444
-   - 다시 해보기
+- 다시 해보기
 ***
 **251222**
 1. 2675
-   - BufferedWriter를 이용해서 맞긴 했지만
-   - StringBuilder + BufferedWriter 조합 추천!
+- BufferedWriter를 이용해서 맞긴 했지만
+- StringBuilder + BufferedWriter 조합 추천!
 2. 10809
-   - 문제를 맞추고 최적화 중에 배열을 전부 -1로 초기화하는 과정 중에 for-each문을 사용했는데 틀림
-   - 찾아보니 for-each문은 배열의 값 복사본을 사용해서 배열의 실제 값이 바뀌는 것은 아니라고 한다.
-   - 따라서 for-each문은 인덱스가 필요없고 출력/조회인 경우 사용해야 한다!
+- 문제를 맞추고 최적화 중에 배열을 전부 -1로 초기화하는 과정 중에 for-each문을 사용했는데 틀림
+- 찾아보니 for-each문은 배열의 값 복사본을 사용해서 배열의 실제 값이 바뀌는 것은 아니라고 한다.
+- 따라서 for-each문은 인덱스가 필요없고 출력/조회인 경우 사용해야 한다!
 3. 3052
-   - boolean 값 초기화 위치는 비교하려는 반복문 위여야 함!
-   - 하나하나 비교하지 않아도 boolean 배열 선언하면 간단히 구현 가능
+- boolean 값 초기화 위치는 비교하려는 반복문 위여야 함!
+- 하나하나 비교하지 않아도 boolean 배열 선언하면 간단히 구현 가능
 ***
 **251223**
 1. 1978
@@ -110,3 +110,24 @@
         }
 ```
    - 이 경우 정상 동작하는 것을 볼 수 있다.
+***
+**201228**
+1. 1157
+```
+   for (int i = 0; i < 26; i++) {
+      if (dictionary[i] > max){
+          max = dictionary[i];
+          count = 1;
+          index = i;
+      } else if (dictionary[i] == max){
+          count++;
+      }
+   }
+```
+   - 반복문 안에서 조건문을 사용할 때 if문을 2개 사용할 것인지, if문과 else-if문을 사용할 것인지 생각하자.
+   - 알파벳이 나온 빈도수가 다른 알파벳과 동일하게 나온 경우 else-if문으로 분기하여 조건 판별
+   - 그러다가 새로 많이 나온 알파벳이 나오면 count 1로 초기화
+2. 1110
+- 원래의 수와 계산을 한 어떤 수와 비교할 경우, 계산을 위해서 원래의 수를 건드리면 안됨!
+- 원래의 수를 하나의 변수로 빼놓고, 하나의 변수를 추가해서 계산을 하자.
+***
